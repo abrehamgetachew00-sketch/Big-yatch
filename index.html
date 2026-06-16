@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Core | Matrix Performance Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+
+    <main class="dashboard-container">
+        <header class="dash-header">
+            <div class="status-indicator">
+                <span class="pulse-dot"></span>
+                <h1>SYSTEM: ACTIVE</h1>
+            </div>
+            <p class="timestamp" id="liveClock">00:00:00 UT</p>
+        </header>
+
+        <section class="metrics-grid">
+            <div class="card">
+                <h3>CPU UTILITY</h3>
+                <div class="metric-value" id="cpuVal">00%</div>
+                <div class="progress-bar"><div class="progress-fill" id="cpuBar"></div></div>
+            </div>
+            <div class="card">
+                <h3>MEMORY ALLOCATION</h3>
+                <div class="metric-value" id="memVal">0.0 GB</div>
+                <div class="progress-bar"><div class="progress-fill" id="memBar"></div></div>
+            </div>
+            <div class="card">
+                <h3>NETWORK I/O</h3>
+                <div class="metric-value" id="netVal">0.0 Mb/s</div>
+                <span class="subtext">Active Stream Protocol</span>
+            </div>
+        </section>
+
+        <section class="terminal-section">
+            <div class="terminal-header">SYSTEM LOGS</div>
+            <div class="terminal-body" id="logTerminal">
+                <p class="log-line">[INFO] Initializing Core Node Core...</p>
+                <p class="log-line">[INFO] Canvas matrix overlay rendering optimized at 60 FPS.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
